@@ -17,10 +17,6 @@ const router = createBrowserRouter([
         element: albumsPage
     },
     {
-        path: "/album/:albumIndex",
-        element: photosPage
-    },
-    {
         path: "/album/:albumIndex/:pageIndex",
         element: photosPage
     },

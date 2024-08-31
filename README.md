@@ -80,13 +80,19 @@
 
 ![Страница фотографий](https://github.com/lenya1567/green_atom/raw/master/images/photos_page_view.png)
 
+<hr>
+
 ### Пагинация - другая страница
 
 ![Показ другой страницы](https://github.com/lenya1567/green_atom/raw/master/images/another_page_view.png)
 
+<hr>
+
 ### Показ выбранной фотографии
 
 ![Показ выбранной фотографии](https://github.com/lenya1567/green_atom/raw/master/images/photo_view.png)
+
+<hr>
 
 ### Страница фотографии (мобильная версия)
 

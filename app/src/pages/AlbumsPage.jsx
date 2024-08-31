@@ -7,7 +7,6 @@ import { isMobile } from 'react-device-detect';
 import loupeImageURL from "../assets/loupe.svg";
 
 export function cutArrayBy(arr, n) {
-    console.log(n);
     let result = [];
     for (let i = 0; i < arr.length; i += n) {
         result.push(arr.slice(i, i + n));

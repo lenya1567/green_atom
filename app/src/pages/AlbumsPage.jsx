@@ -27,8 +27,6 @@ export default observer((props) => {
         props.state.fetchAlbums();
     }, []);
 
-    console.log(isMobile);
-
     return (
         <div className="albums">
             <h1>Мои альбомы</h1>

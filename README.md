@@ -74,6 +74,8 @@
 
 ![Страница альбомов](https://github.com/lenya1567/green_atom/raw/master/images/albums_page_view.png)
 
+<hr>
+
 ### Страница фотографий
 
 ![Страница фотографий](https://github.com/lenya1567/green_atom/raw/master/images/photos_page_view.png)

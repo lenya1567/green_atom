@@ -1,0 +1,99 @@
+.albums-list {
+  max-width: 100%;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 2px solid whitesmoke;
+  flex: 1 1 auto;
+  overflow: auto;
+  box-sizing: content-box;
+  padding-bottom: 16px;
+  padding-right: 16px;
+}
+
+.albums-list {
+
+  padding-top: 16px;
+
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  list-style: none;
+
+  .album {
+
+    transition: opacity 0.3s;
+    cursor: pointer;
+
+    flex: 1 1 0;
+    border-radius: 8px;
+
+    .image {
+      background-color: whitesmoke;
+      display: flex;
+      border-radius: 8px;
+      position: relative;
+      min-height: 192px;
+      aspect-ratio: 16 / 9;
+    }
+
+    img {
+      border-radius: 8px;
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      margin: auto;
+      transition: opacity 0.3s;
+      object-fit: contain;
+      width: 100%;
+    }
+
+    .title {
+      margin-top: 8px;
+      font-size: 1.2em;
+      font-weight: 600;
+      transition: font-weight 0.3s;
+    }
+
+    .albums-count {
+      font-size: 1.0em;
+      color: gray;
+      transition: font-weight 0.3s;
+    }
+
+  }
+
+  .album:hover {
+
+    img {
+      opacity: 0.3;
+      transition: opacity 0.3s;
+    }
+
+    .loupe {
+      z-index: 100;
+      opacity: 1;
+      transition: opacity 0.3s;
+    }
+
+    .title {
+      font-weight: 800;
+      transition: font-weight 0.3s;
+    }
+
+    .albums-count {
+      font-weight: 600;
+      transition: font-weight 0.3s;
+    }
+
+  }
+
+  .loupe {
+    opacity: 0;
+    color: gray;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+}

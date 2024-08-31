@@ -1,0 +1,420 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 2.2em;
+  line-height: 1.1;
+  margin: 0;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* My styles */
+
+/* albums styles */
+
+#root {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  max-height: 100%;
+}
+
+button:active {
+  background-color: #f5f3f3;
+}
+
+.albums {
+  padding: 16px 0px 0px 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+}
+
+.albums-list {
+  max-width: 100%;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 2px solid whitesmoke;
+  flex: 1 1 auto;
+  overflow: auto;
+  box-sizing: content-box;
+  padding-bottom: 16px;
+  padding-right: 16px;
+}
+
+.albums-list {
+
+  padding-top: 16px;
+
+  display: grid;
+  row-gap: 24px;
+  column-gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  list-style: none;
+
+  .album {
+
+    transition: opacity 0.3s;
+    cursor: pointer;
+
+    flex: 1 1 0;
+    border-radius: 8px;
+
+    .image {
+      background-color: whitesmoke;
+      display: flex;
+      border-radius: 8px;
+      position: relative;
+      min-height: 192px;
+      aspect-ratio: 16 / 9;
+    }
+
+    img {
+      border-radius: 8px;
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      margin: auto;
+      transition: opacity 0.3s;
+      object-fit: contain;
+      width: 100%;
+    }
+
+    .title {
+      margin-top: 8px;
+      font-size: 1.2em;
+      font-weight: 600;
+      transition: font-weight 0.3s;
+    }
+
+    .albums-count {
+      font-size: 1.0em;
+      color: gray;
+      transition: font-weight 0.3s;
+    }
+
+  }
+
+  .album:hover {
+
+    img {
+      opacity: 0.3;
+      transition: opacity 0.3s;
+    }
+
+    .loupe {
+      z-index: 100;
+      opacity: 1;
+      transition: opacity 0.3s;
+    }
+
+    .title {
+      font-weight: 800;
+      transition: font-weight 0.3s;
+    }
+
+    .albums-count {
+      font-weight: 600;
+      transition: font-weight 0.3s;
+    }
+
+  }
+
+  .loupe {
+    opacity: 0;
+    color: gray;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+}
+
+/* photos styles */
+
+.album-name {
+  display: flex;
+  align-items: center;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 16px;
+  column-gap: 16px;
+}
+
+.pages {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 8px;
+}
+
+.page-button {
+  margin-right: 12px;
+}
+
+.page-button:first-child {
+  margin-left: 16px;
+}
+
+.page-button-selected {
+  outline: 2px solid lightblue;
+}
+
+.photos {
+  padding: 16px 0px 0px 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+}
+
+.photos-list {
+  max-width: 100%;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 2px solid whitesmoke;
+  flex: 1 1 auto;
+  overflow: auto;
+  box-sizing: content-box;
+  padding-bottom: 16px;
+  padding-right: 16px;
+}
+
+.photos-list {
+
+  padding-top: 16px;
+
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  list-style: none;
+
+  .photo,
+  .blank-photo {
+
+    transition: opacity 0.3s;
+    cursor: pointer;
+
+    flex: 1 1 0;
+    border-radius: 8px;
+
+    .image {
+      background-color: whitesmoke;
+      display: flex;
+      border-radius: 8px;
+      position: relative;
+      min-height: 192px;
+      aspect-ratio: 16 / 9;
+    }
+
+    img {
+      border-radius: 8px;
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      margin: auto;
+      transition: opacity 0.3s;
+      object-fit: contain;
+      width: 100%;
+    }
+
+    .title {
+      margin-top: 8px;
+      font-size: 1.2em;
+      font-weight: 600;
+      transition: font-weight 0.3s;
+    }
+
+    .photos-count {
+      font-size: 1.0em;
+      color: gray;
+      transition: font-weight 0.3s;
+    }
+
+  }
+
+  .photo:hover {
+
+    img {
+      opacity: 0.3;
+      transition: opacity 0.3s;
+    }
+
+    .loupe {
+      z-index: 100;
+      opacity: 1;
+      transition: opacity 0.3s;
+    }
+
+    .title {
+      font-weight: 800;
+      transition: font-weight 0.3s;
+    }
+
+    .photos-count {
+      font-weight: 600;
+      transition: font-weight 0.3s;
+    }
+
+  }
+
+  .loupe {
+    opacity: 0;
+    color: gray;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+}
+
+.image-view {
+  opacity: 0;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.image-view-content {
+  position: fixed;
+  top: calc(100vh / 2);
+  left: 50%;
+  background-color: white;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s, height 0.4s;
+  border-radius: 8px;
+  padding: 16px;
+  z-index: -1;
+
+  img {
+    border-radius: 8px;
+    display: block;
+  }
+
+}
+
+.image-view-opened {
+  z-index: 200;
+  opacity: 1;
+  transition: opacity 0.2s;
+
+  .image-view-content {
+    z-index: 201;
+    min-width: 200px;
+    height: fit-content;
+    transition: width 0.4s, height 0.4s;
+    width: fit-content;
+
+    img {
+      max-height: calc(100vh - 64px);
+      object-fit: contain;
+    }
+
+  }
+
+  .actions {
+    display: flex;
+    height: 32px;
+    padding-top: 16px;
+    justify-content: end;
+    color: gray;
+
+    img:not(:last-child) {
+      margin-right: 12px;
+      display: block;
+    }
+
+    img {
+      cursor: pointer;
+    }
+
+    span {
+      display: inline-flex;
+      align-items: center;
+      margin-right: 16px;
+      line-height: 1;
+      font-size: 1.2em;
+    }
+
+  }
+
+}

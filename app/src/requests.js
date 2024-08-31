@@ -32,7 +32,6 @@ export async function fetchAlbumRequest(albumIndex, pageIndex) {
 }
 
 export async function fetchPageRequest(albumIndex, pageIndex) {
-    console.log(albumIndex, pageIndex);
     const client = getDirectusClient();
     const albumPhotos = await client.request(readItem('Album', `${albumIndex}`, {
         fields: ["photos.directus_files_id"],

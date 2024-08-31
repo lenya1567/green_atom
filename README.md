@@ -70,9 +70,22 @@
 
 Тестирование происходило в браузере Google Chrome под MacOS.
 
-![Страница альбомов](https://github.com/lenya1567/green_atom/raw/master/images/albums_page_view.png)
-![Страница фотографий](https://github.com/lenya1567/green_atom/raw/master/images/photos_page_view.png)
-![Показ другой страницы](https://github.com/lenya1567/green_atom/raw/master/images/another_page_view.png)
-![Показ выбранной фотографии](https://github.com/lenya1567/green_atom/raw/master/images/photo_view.png)
-![Мобильная версия](https://github.com/lenya1567/green_atom/raw/master/images/adaptive_view.png)
+### Страница альбомов
 
+![Страница альбомов](https://github.com/lenya1567/green_atom/raw/master/images/albums_page_view.png)
+
+### Страница фотографий
+
+![Страница фотографий](https://github.com/lenya1567/green_atom/raw/master/images/photos_page_view.png)
+
+### Пагинация - другая страница
+
+![Показ другой страницы](https://github.com/lenya1567/green_atom/raw/master/images/another_page_view.png)
+
+### Показ выбранной фотографии
+
+![Показ выбранной фотографии](https://github.com/lenya1567/green_atom/raw/master/images/photo_view.png)
+
+### Страница фотографии (мобильная версия)
+
+![Мобильная версия](https://github.com/lenya1567/green_atom/raw/master/images/adaptive_view.png)
